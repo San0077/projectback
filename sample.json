@@ -1,0 +1,114 @@
+[
+ 
+ {
+  "id": "102",
+  "email": "teacher@gmail.com",
+  "password": "@dminControl",
+  "name": "keerthi",
+  "standard": "3rd",
+  "surname": "sai",
+  "studies": "B.E ",
+  "fatherName": "Chandiran",
+  "role": "teacher",
+  "age": "22",
+  "course": "mech",
+  "gender": "female",
+  "mother": "shanthi",
+  "pic": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.collinsdictionary.com%2Fimages%2Ffull%2Fteacher_81762259.jpg&imgrefurl=https%3A%2F%2Fwww.collinsdictionary.com%2Fdictionary%2Fenglish%2Fteacher&tbnid=DG9rPD-3d3kunM&vet=12ahUKEwjghoGOm4_4AhUEhuYKHZWjBRwQMygZegUIARCSAg..i&docid=nagMBKT7Y6hX_M&w=748&h=1000&q=teacher%20picture&ved=2ahUKEwjghoGOm4_4AhUEhuYKHZWjBRwQMygZegUIARCSAg"
+ },
+
+ {
+  "0": {
+   "reason": "santhosh@Gmail.com",
+   "start": "2022-10-08",
+   "End": "2022-09-21",
+   "status": "pending"
+  },
+  "id": "105",
+  "name": "madhu",
+  "surname": "sai",
+  "standard": "1st",
+  "email": "madhu@hotmail.com",
+  "password": "123",
+  "fatherName": "chandiran",
+  "age": "22",
+  "gender": "female",
+  "role": "student"
+
+ },
+ {
+  "name": "nandhakumar",
+  "email": "Jacky.Ankunding93@hotmail.com",
+  "password": "123",
+  "id": "106",
+  "surname": "sai",
+  "standard": "2rd",
+  "gender": "male",
+  "fatherName": "Mani",
+  "role": "student",
+  "age": "22",
+  "course": "Java"
+ },
+ {
+  "name": "Juana MacGyver DVM",
+  "email": "Lera_Braun@hotmail.com",
+  "password": "123",
+  "id": "107",
+  "surname": "Rolesi",
+  "gender": "male",
+  "standard": "2nd",
+  "role": "student",
+  "fatherName": "Navin",
+  "age": "22",
+  "course": "Python"
+ },
+ {
+  "id": "108",
+  "name": "Elavenil",
+  "surname":"Nathiya",
+  "studies": "BE",
+  "mother": "shathi",
+  "fatherName": "chandiran",
+  "email": "teacher@hotmail.co",
+  "password": "123",
+  "age": "22",
+  "gender": "female",
+  "role": "teacher",
+  "standard": "2nd",
+  "course": "mech"
+ },
+
+ {
+  "0": {
+   "reason": "santhosh@Gmail.com",
+   "start": "2022-09-02",
+   "End": "2022-09-30",
+   "status": "pending"
+  },
+  "name": "Santhosh",
+  "password": "santhosh",
+  "id": "110",
+  "surname": "sai",
+  "email": "santhoshbalaji304@gmail.com",
+  "pass": "1234",
+  "gender": "male",
+  "standard": "3rd",
+  "fatherName": "chandiran",
+  "age": "21",
+  "course": "mech",
+  "role": "student"
+ },
+ {
+  "name": "Bala",
+  "password": "santhosh123",
+  "id": "111",
+  "surname": "sai",
+  "email": "santhosh123@hotmail",
+  "gender": "male",
+  "standard": "2rd",
+  "fatherName": "Kumar",
+  "age": "22",
+  "course": "ECE",
+  "role": "Student"
+ }
+]
