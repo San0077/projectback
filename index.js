@@ -9,7 +9,7 @@ app.use(express.json());
 dotenv.config()
 app.use(cors())
 
-var mongoUrl = process.env.mongoUrl;
+var mongoUrl = "mongodb://localhost:27017";
 async function createConnection(){
     var client = new MongoClient(mongoUrl);
     await client.connect()
@@ -32,6 +32,57 @@ app.post("/signin", async function(req,res){
     res.send(result)
     console.log(result)
     
+})
+const jobs =[{
+    title:" board for graphic",
+    discrp:"Dribbble is the heart of the design community and the best resource to discover and connect with designers and jobs worldwide.",
+    link:""
+  },{
+    
+title:"free lancing ",
+discrp:"Dribbble is the heart of the design community and the best resource to…",
+link:""
+
+},
+{
+    
+title:"design Jobs",
+discrp:"Dribbble is the heart of the design community and the best resource to…",
+link:""
+}]
+app.post("/jobs",async function(req,res){
+    let {company,special,location}=req.body
+    let result =await client.db("jobs").collection("jobsData")
+    .find({"company":{$regex:company},"special":{$regex:special},"location":{$regex:location},
+   
+})
+    .toArray()
+ res.send(result)
+})
+
+app.post("/jobs_post",async function(req,res){
+    let {img,company,special,location,mode}=req.body
+    let result =await client.db("jobs").collection("jobsData").insertOne({img,company,special,location,mode})
+    res.send(result);
+})
+app.get("/jobs_post",async function(req,res){
+    let result =await client.db("chart").collection("data").find({}).toArray();
+    res.send(result)
+ })
+app.get("/jobs", async function(req,res){
+    let {q} =req.query;
+    console.log(q)
+       function search (s){
+        return jobs.filter( data=>{
+            if(data.title.toString().toLowerCase()
+        .includes(s)) 
+        {
+            return data
+        }
+    })
+    }
+      res.send(search(q))
+   
 })
 app.get("/",async function(req,res){
     let result =await client.db("dashboard").collection("data").find({}).toArray()
@@ -59,14 +110,14 @@ app.post("/jobs",async function(req,res){
         if(!compare){
             res.status(401).send({msg:"invalid"})
         }else{
-            const token = await jwt.sign({id:result._id},"santhosh");
-              res.send(result)
+            const token = await jwt.sign({id:"result._id"},"santhosh");
+            res.send({msg:"login sucessfully",token:token})
               console.log(result)
         }
     }
   })
 
 
-app.listen(process.env.PORT,()=>{
+app.listen(4000,()=>{
     console.log("server is ready")
 });
