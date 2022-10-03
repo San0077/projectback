@@ -9,7 +9,7 @@ app.use(express.json());
 dotenv.config()
 app.use(cors())
 
-var mongoUrl = "mongodb://localhost:27017";
+var mongoUrl = process.env.mongoUrl;
 async function createConnection(){
     var client = new MongoClient(mongoUrl);
     await client.connect()
@@ -118,6 +118,6 @@ app.post("/jobs",async function(req,res){
   })
 
 
-app.listen(4000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("server is ready")
 });
